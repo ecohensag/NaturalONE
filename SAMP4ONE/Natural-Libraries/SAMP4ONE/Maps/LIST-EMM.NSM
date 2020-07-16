@@ -1,0 +1,99 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP
+* <Natural Source Header
+* MAP2: PROTOTYPE VERSION 820 --- CREATED BY ONE 9.1.1 ---
+* INPUT USING MAP 'XXXXXXXX'
+*     #PG-NMBR CALLDATA.#FIRST-NAME(*) CALLDATA.#NAME(*) CALLDATA.#PERSID(*)
+DEFINE DATA PARAMETER
+1 #PG-NMBR (I2)
+1 CALLDATA.#FIRST-NAME (A020/00001:00008)
+1 CALLDATA.#NAME (A020/00001:00008)
+1 CALLDATA.#PERSID (A008/00001:00008)
+END-DEFINE
+FORMAT PS=024 LS=080 ZP=OFF SG=OFF KD=OFF IP=OFF
+* MAP2: MAP PROFILES *****************************        200***********
+* .TTAAAMMOO   D I D I N D I D I        ?_)^&:+(                       *
+* 024079        N0NNUCN             X        01 SYSPROF NR             *
+************************************************************************
+INPUT          (     IP=OFF                                           /*
+                                                                       )
+/
+/
+/
+ 003T CALLDATA.#NAME (1) /*.99D020 A020 .
+      (AD=MDRT )
+   /**A1000080000100001000010000100001100008001001000001000HV
+ 027T CALLDATA.#PERSID (1) /*.99D008 A008 .
+      (AD=MDRT )
+   /**A1000080000100001000010000100001100008001001000001000HV
+ 043T CALLDATA.#FIRST-NAME (1) /*.99D020 A020 .
+      (AD=MDRT )
+   /**A1000080000100001000010000100001100008001001000001000HV
+/
+ 003T CALLDATA.#NAME (2) /*.99D020 A020 .
+      (AD=MDRT )
+ 027T CALLDATA.#PERSID (2) /*.99D008 A008 .
+      (AD=MDRT )
+ 043T CALLDATA.#FIRST-NAME (2) /*.99D020 A020 .
+      (AD=MDRT )
+/
+ 003T CALLDATA.#NAME (3) /*.99D020 A020 .
+      (AD=MDRT )
+ 027T CALLDATA.#PERSID (3) /*.99D008 A008 .
+      (AD=MDRT )
+ 043T CALLDATA.#FIRST-NAME (3) /*.99D020 A020 .
+      (AD=MDRT )
+/
+ 003T CALLDATA.#NAME (4) /*.99D020 A020 .
+      (AD=MDRT )
+ 027T CALLDATA.#PERSID (4) /*.99D008 A008 .
+      (AD=MDRT )
+ 043T CALLDATA.#FIRST-NAME (4) /*.99D020 A020 .
+      (AD=MDRT )
+/
+ 003T CALLDATA.#NAME (5) /*.99D020 A020 .
+      (AD=MDRT )
+ 027T CALLDATA.#PERSID (5) /*.99D008 A008 .
+      (AD=MDRT )
+ 043T CALLDATA.#FIRST-NAME (5) /*.99D020 A020 .
+      (AD=MDRT )
+/
+ 003T CALLDATA.#NAME (6) /*.99D020 A020 .
+      (AD=MDRT )
+ 027T CALLDATA.#PERSID (6) /*.99D008 A008 .
+      (AD=MDRT )
+ 043T CALLDATA.#FIRST-NAME (6) /*.99D020 A020 .
+      (AD=MDRT )
+/
+ 003T CALLDATA.#NAME (7) /*.99D020 A020 .
+      (AD=MDRT )
+ 027T CALLDATA.#PERSID (7) /*.99D008 A008 .
+      (AD=MDRT )
+ 043T CALLDATA.#FIRST-NAME (7) /*.99D020 A020 .
+      (AD=MDRT )
+/
+ 003T CALLDATA.#NAME (8) /*.99D020 A020 .
+      (AD=MDRT )
+ 027T CALLDATA.#PERSID (8) /*.99D008 A008 .
+      (AD=MDRT )
+ 043T CALLDATA.#FIRST-NAME (8) /*.99D020 A020 .
+      (AD=MDRT )
+/
+/
+/
+/
+ 057T #PG-NMBR /*.99D005 I002 .
+      (AD=MDRT )
+/
+/
+/
+/
+/
+/
+/
+/
+/
+* MAP2: VALIDATION *****************************************************
+* MAP2: END OF MAP *****************************************************
+END

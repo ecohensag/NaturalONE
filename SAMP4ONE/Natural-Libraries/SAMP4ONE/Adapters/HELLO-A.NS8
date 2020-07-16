@@ -1,0 +1,37 @@
+* >Natural Source Header 000000
+* :CP
+* <Natural Source Header
+* PAGE1: PROTOTYPE /*<RO>>
+* PROCESS PAGE USING 'XXXXXXXX' WITH
+* NAME RESULT
+DEFINE DATA PARAMETER
+/*( PARAMETER
+1 NAME (A) DYNAMIC
+1 RESULT (A) DYNAMIC
+/*) END-PARAMETER
+END-DEFINE
+*
+/*( PROCESS PAGE
+PROCESS PAGE U'/samplecomponents/helloworld' WITH
+PARAMETERS
+ NAME U'name'
+  VALUE NAME
+ NAME U'result'
+  VALUE RESULT
+END-PARAMETERS
+/*) END-PROCESS
+*
+/*/*( DEFINE EVENT HANDLER
+* DECIDE ON FIRST *PAGE-EVENT
+*  VALUE U'nat:page.end', U'nat:browser.end'
+*   /* Page closed.
+*   IGNORE
+*  VALUE U'sayHello'
+*   PROCESS PAGE UPDATE FULL
+*  NONE VALUE
+*   /* Unhandled events.
+*   PROCESS PAGE UPDATE
+* END-DECIDE
+/*/*) END-HANDLER
+*
+END /*<<RO>

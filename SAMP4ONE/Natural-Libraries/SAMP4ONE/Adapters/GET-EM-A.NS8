@@ -1,0 +1,37 @@
+* >Natural Source Header 000000
+* :CP
+* <Natural Source Header
+* PAGE1: PROTOTYPE /*<RO>>
+* PROCESS PAGE USING 'XXXXXXXX' WITH
+* EMPLOYEE PERSID
+DEFINE DATA PARAMETER
+/*( PARAMETER
+1 EMPLOYEE (A) DYNAMIC
+1 PERSID (A) DYNAMIC
+/*) END-PARAMETER
+END-DEFINE
+*
+/*( PROCESS PAGE
+PROCESS PAGE U'/samplecomponents/getemployee' WITH
+PARAMETERS
+ NAME U'employee'
+  VALUE EMPLOYEE
+ NAME U'persid'
+  VALUE PERSID
+END-PARAMETERS
+/*) END-PROCESS
+*
+/*/*( DEFINE EVENT HANDLER
+* DECIDE ON FIRST *PAGE-EVENT
+*  VALUE U'nat:page.end', U'nat:browser.end'
+*   /* Page closed.
+*   IGNORE
+*  VALUE U'getEmployee'
+*   PROCESS PAGE UPDATE FULL
+*  NONE VALUE
+*   /* Unhandled events.
+*   PROCESS PAGE UPDATE
+* END-DECIDE
+/*/*) END-HANDLER
+*
+END /*<<RO>
