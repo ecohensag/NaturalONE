@@ -54,7 +54,7 @@ REPEAT
       ESCAPE BOTTOM
     VALUE 'PF8'
       RESET #COUNTER
-      add 1 to #PG-NMBR
+      add 1 to #PG-NMBR /* this remark for a change.
       PERFORM READ-NEXT
     NONE
       ESCAPE BOTTOM
